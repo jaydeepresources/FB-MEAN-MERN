@@ -1,0 +1,20 @@
+<div class="container">
+    <p class="display-5 mt-3 py-2">Iterative Rendering</p>
+    <hr>
+
+    <h1 class="mb-3">Fruits</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center"
+            *ngFor="let fruit of fruits; let i = index">
+            <span class="lead">{{fruit}}</span>
+            <button class="btn btn-danger bi bi-x-lg" (click)="deleteFruit(i)"></button>
+        </li>
+    </ul>
+
+    <div class="input-group mb-3 mt-2">
+        <input type="text" class="form-control" placeholder="Enter fruit name" name="newFruit" [(ngModel)]="newFruit">
+        <button class="btn btn-primary" type="button" (click)="addFruit()" [disabled]="newFruit == ''">Submit</button>
+    </div>
+
+</div>
