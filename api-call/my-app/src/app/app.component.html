@@ -1,0 +1,22 @@
+<div class="container">
+
+    <p class="display-5 my-2 py-2">Users</p>
+    <hr>
+
+    <div class="card mb-3" *ngFor="let user of users">
+        <div class="card-body">
+            <h5 class="card-title">{{user.name}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Email: {{user.email}}</li>
+            <li class="list-group-item">Phone: {{user.phone}}</li>
+            <li class="list-group-item">Address:
+                {{user.address.street}},
+                {{user.address.suite}},
+                {{user.address.city}},
+                {{user.address.zipcode}}
+            </li>
+        </ul>
+    </div>
+
+</div>
